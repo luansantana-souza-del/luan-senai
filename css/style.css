@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+}
+.step-active {
+    color: #2563eb;
+    font-weight: 700;
+}
+.step-active .step-badge {
+    background-color: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+.step-done {
+    color: #10b981;
+}
+.step-done .step-badge {
+    background-color: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+.page-step {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.page-step.active {
+    display: block;
+    opacity: 1;
+}

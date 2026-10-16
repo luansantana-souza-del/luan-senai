@@ -1,0 +1,397 @@
+  <!DOCTYPE html>
+    <html lang="pt-BR" class="h-full bg-slate-50">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Protótipo de Vendas - FlowSales Pro</title>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <script src="https://unpkg.com/lucide@latest"></script>
+        <style>
+         
+        </style>
+    </head>
+    <body class="flex flex-col min-h-screen text-slate-800 antialiased selection:bg-blue-500 selection:text-white">
+    
+        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+            <div class="max-w-5xl mx-auto px-4 py-3">
+                <div class="flex justify-between items-center text-xs sm:text-sm font-medium">
+        
+                    <div id="step-nav-1" class="step-active flex items-center space-x-2 transition-all">
+                        <span class="step-badge w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold text-xs">1</span>
+                        <span class="hidden sm:inline">Oferta</span>
+                    </div>
+                    <div class="flex-1 max-w-[60px] sm:max-w-[100px] h-0.5 bg-slate-200 mx-2">
+                        <div id="line-1" class="h-full bg-blue-600 w-0 transition-all duration-300"></div>
+                    </div>
+    
+                    <div id="step-nav-2" class="text-slate-400 flex items-center space-x-2 transition-all">
+                        <span class="step-badge w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold text-xs bg-white">2</span>
+                        <span class="hidden sm:inline">Pagamento</span>
+                    </div>
+                    <div class="flex-1 max-w-[60px] sm:max-w-[100px] h-0.5 bg-slate-200 mx-2">
+                        <div id="line-2" class="h-full bg-blue-600 w-0 transition-all duration-300"></div>
+                    </div>
+    
+                    <div id="step-nav-3" class="text-slate-400 flex items-center space-x-2 transition-all">
+                        <span class="step-badge w-6 h-6 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold text-xs bg-white">3</span>
+                        <span class="hidden sm:inline">Confirmação</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <main class="flex-1 max-w-5xl w-full mx-auto p-4 sm:p-6 md:p-8">
+    
+            <section id="page-1" class="page-step active space-y-12">
+                
+                <div class="text-center space-y-6 pt-4 sm:pt-8 max-w-3xl mx-auto">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">
+                        <i data-lucide="zap" class="w-3.5 h-3.5 text-blue-600"></i>
+                        Método Validado 2026
+                    </span>
+                    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Multiplique suas vendas online sem gastar mais com anúncios
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Descubra a metodologia exata de funil acelerado usada por mais de 1.200 empresas para converter tráfego em clientes pagantes em tempo recorde.
+                    </p>
+                    <div class="pt-2">
+                        <button onclick="goToStep(2)" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg shadow-emerald-600/30 transition-all hover:scale-[1.02] active:scale-95">
+                            <span>Garantir Acesso Imediato</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </button>
+                        <p class="text-xs text-slate-500 mt-2 flex items-center justify-center gap-1">
+                            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+                            Garantia incondicional de 7 dias • Acesso instantâneo
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="relative mx-auto max-w-4xl rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-white p-2">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Dashboard do Produto" class="w-full h-64 sm:h-96 object-cover rounded-xl" onerror="this.src='https://placehold.co/1200x600/1e293b/ffffff?text=FlowSales+Pro+Dashboard'">
+                </div>
+    
+                <div class="space-y-6">
+                    <div class="text-center">
+                        <h2 class="text-2xl font-bold text-slate-900">O que você vai receber hoje</h2>
+                        <p class="text-slate-600">Tudo o que você precisa para escalar sua operação</p>
+                    </div>
+                    <div class="grid sm:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                                <i data-lucide="rocket" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Funil Acelerado</h3>
+                            <p class="text-sm text-slate-600">Templates prontos de landing pages e scripts de abordagem de alta conversão.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-4">
+                                <i data-lucide="line-chart" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Automação de Checkout</h3>
+                            <p class="text-sm text-slate-600">Estratégias de recuperação de carrinho por e-mail e WhatsApp automatizado.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition">
+                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-4">
+                                <i data-lucide="users" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-2">Mentoria Mensal</h3>
+                            <p class="text-sm text-slate-600">Encontros ao vivo para análise de métricas e ajustes estratégicos no seu negócio.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-10 space-y-6">
+                    <div class="text-center max-w-xl mx-auto space-y-2">
+                        <div class="flex justify-center text-amber-400 gap-1">
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-amber-400"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold">Quem usa, recomenda</h2>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                            <p class="text-slate-300 text-sm mb-4">"Triplicamos nossa taxa de conversão no primeiro mês de implementação. O checkout fluido fez toda a diferença no nosso resultado."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-blue-500 font-bold flex items-center justify-center text-white">CR</div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Carlos Rocha</h4>
+                                    <p class="text-xs text-slate-400">CEO, E-commerce Tech</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/80 p-6 rounded-2xl border border-slate-700">
+                            <p class="text-slate-300 text-sm mb-4">"A clareza das etapas e o suporte nos pouparam meses de testes errados. Valeu cada centavo investido."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-emerald-500 font-bold flex items-center justify-center text-white">AM</div>
+                                <div>
+                                    <h4 class="font-bold text-sm">Aline Mendes</h4>
+                                    <p class="text-xs text-slate-400">Diretora de Marketing</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="max-w-md mx-auto bg-white rounded-3xl border-2 border-blue-600 shadow-2xl p-8 relative">
+                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs uppercase font-extrabold tracking-wider px-4 py-1.5 rounded-full shadow-md">
+                        Oferta Especial por Tempo Limitado
+                    </span>
+                    <div class="text-center space-y-4">
+                        <h3 class="text-xl font-bold text-slate-900">Plano Anual FlowSales</h3>
+                        <div class="flex items-baseline justify-center gap-1">
+                            <span class="text-sm font-semibold text-slate-500 line-through">R$ 997</span>
+                            <span class="text-4xl font-extrabold text-slate-900">12x R$ 29,70</span>
+                        </div>
+                        <p class="text-xs text-slate-500">ou R$ 297,00 à vista no Pix</p>
+                        
+                        <ul class="text-left text-sm space-y-3 py-4 border-y border-slate-100">
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Acesso Vitalício à Metodologia</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> 5 Templates Prontos de Checkout</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Suporte Prioritário no WhatsApp</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-600"></i> Certificado de Conclusão</li>
+                        </ul>
+    
+                        <button onclick="goToStep(2)" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-emerald-600/30 transition hover:scale-[1.01]">
+                            Quero Aproveitar o Desconto
+                        </button>
+                    </div>
+                </div>
+    
+            </section>
+    
+            <section id="page-2" class="page-step space-y-8">
+                <div class="flex items-center justify-between pb-4 border-b border-slate-200">
+                    <button onclick="goToStep(1)" class="text-sm text-slate-500 hover:text-slate-800 flex items-center gap-1 font-medium">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i> Voltar à oferta
+                    </button>
+                    <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200 flex items-center gap-1">
+                        <i data-lucide="lock" class="w-3.5 h-3.5"></i> Ambientes Seguro 256-bit
+                    </span>
+                </div>
+    
+                <div class="grid md:grid-cols-12 gap-8">
+                   
+                    <div class="md:col-span-7 space-y-6">
+                        
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs flex items-center justify-center font-bold">1</span>
+                                Dados Pessoais
+                            </h2>
+                            
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Nome Completo</label>
+                                    <input type="text" id="cust-name" placeholder="Ex: João da Silva" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    <p id="err-name" class="text-xs text-red-500 hidden mt-1">Por favor, informe seu nome completo.</p>
+                                </div>
+                                <div class="grid sm:grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">E-mail para Acesso</label>
+                                        <input type="email" id="cust-email" placeholder="seu@email.com" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <p id="err-email" class="text-xs text-red-500 hidden mt-1">Digite um e-mail válido.</p>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">WhatsApp / Telefone</label>
+                                        <input type="tel" id="cust-phone" placeholder="(11) 99999-9999" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        <p id="err-phone" class="text-xs text-red-500 hidden mt-1">Informe um telefone com DDD.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                                <span class="w-6 h-6 rounded-full bg-blue-100 text-blue-600 text-xs flex items-center justify-center font-bold">2</span>
+                                Forma de Pagamento
+                            </h2>
+    
+                            <div class="grid grid-cols-3 gap-2">
+                                <button type="button" onclick="setPaymentMethod('pix')" id="pay-tab-pix" class="py-2.5 px-3 rounded-xl border text-xs font-bold flex flex-col items-center justify-center gap-1 border-blue-600 bg-blue-50 text-blue-700 transition">
+                                    <i data-lucide="qr-code" class="w-5 h-5"></i>
+                                    <span>PIX (Aprovação Instantânea)</span>
+                                </button>
+                                <button type="button" onclick="setPaymentMethod('card')" id="pay-tab-card" class="py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-bold flex flex-col items-center justify-center gap-1 text-slate-600 hover:bg-slate-50 transition">
+                                    <i data-lucide="credit-card" class="w-5 h-5"></i>
+                                    <span>Cartão de Crédito</span>
+                                </button>
+                                <button type="button" onclick="setPaymentMethod('boleto')" id="pay-tab-boleto" class="py-2.5 px-3 rounded-xl border border-slate-200 text-xs font-bold flex flex-col items-center justify-center gap-1 text-slate-600 hover:bg-slate-50 transition">
+                                    <i data-lucide="barcode" class="w-5 h-5"></i>
+                                    <span>Boleto Bancário</span>
+                                </button>
+                            </div>
+    
+                            <div id="pay-panel-pix" class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-center space-y-3">
+                                <div class="inline-flex p-2 bg-white rounded-lg shadow-sm">
+                                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=00020126580014br.gov.bcb.pix0136123e4567-e89b-12d3-a456-4266141740005204000053039865405297.005802BR5925FlowSales+Tecnologia6009SAO+PAULO62070503***6304E2CA" alt="QR Code PIX Simulado" class="w-32 h-32">
+                                </div>
+                                <p class="text-xs text-slate-600">Escaneie o QR Code acima ou use a opção "Copia e Cola" após confirmar o pedido.</p>
+                                <div class="text-xs font-semibold text-emerald-700 bg-emerald-100 py-1 px-3 rounded-full inline-block">
+                                    Desconto de R$ 30,00 aplicado!
+                                </div>
+                            </div>
+
+                            <div id="pay-panel-card" class="space-y-3 hidden">
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Número do Cartão</label>
+                                    <input type="text" placeholder="0000 0000 0000 0000" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                </div>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">Validade</label>
+                                        <input type="text" placeholder="MM/AA" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-slate-700 mb-1">CVV</label>
+                                        <input type="text" placeholder="123" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-slate-700 mb-1">Parcelas</label>
+                                    <select class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                                        <option>1x de R$ 297,00 (sem juros)</option>
+                                        <option>6x de R$ 54,50</option>
+                                        <option selected>12x de R$ 29,70</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div id="pay-panel-boleto" class="bg-amber-50 p-4 rounded-xl border border-amber-200 text-xs text-amber-800 space-y-1 hidden">
+                                <p class="font-bold flex items-center gap-1"><i data-lucide="info" class="w-4 h-4"></i> Atenção ao prazo:</p>
+                                <p>Boletos podem levar até 3 dias úteis para compensação. O acesso será liberado automaticamente após o pagamento.</p>
+                            </div>
+                        </div>
+    
+                        <button onclick="processOrder()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg shadow-emerald-600/30 transition text-lg flex items-center justify-center gap-2">
+                            <i data-lucide="lock" class="w-5 h-5"></i>
+                            <span>Finalizar Pedido Agora</span>
+                        </button>
+                    </div>
+    
+                    <div class="md:col-span-5">
+                        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm sticky top-20 space-y-4">
+                            <h3 class="font-bold text-slate-900 border-b border-slate-100 pb-3">Resumo do Pedido</h3>
+                            
+                            <div class="flex items-center gap-3">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=150&q=80" class="w-16 h-16 rounded-lg object-cover border border-slate-200" onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=FlowSales'">
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-900">FlowSales Pro - Licença Anual</h4>
+                                    <p class="text-xs text-slate-500">Acesso completo + Bônus</p>
+                                </div>
+                            </div>
+    
+                            <div class="space-y-2 text-xs border-t border-slate-100 pt-3">
+                                <div class="flex justify-between text-slate-600">
+                                    <span>Preço Original</span>
+                                    <span class="line-through">R$ 997,00</span>
+                                </div>
+                                <div class="flex justify-between text-slate-600">
+                                    <span>Desconto Promocional</span>
+                                    <span class="text-emerald-600 font-semibold">- R$ 700,00</span>
+                                </div>
+                                <div class="flex justify-between text-slate-600">
+                                    <span>Garantia de Reembolso</span>
+                                    <span>7 dias</span>
+                                </div>
+                                <div class="flex justify-between text-slate-900 font-bold text-sm pt-2 border-t border-slate-100">
+                                    <span>Total</span>
+                                    <span id="summary-price" class="text-emerald-600">R$ 297,00</span>
+                                </div>
+                            </div>
+    
+                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 text-[11px] text-slate-500 space-y-1">
+                                <p class="font-semibold text-slate-700">🔒 Compra 100% Protegida</p>
+                                <p>Seus dados estão totalmente protegidos com criptografia ponta a ponta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="page-3" class="page-step space-y-8 max-w-2xl mx-auto text-center py-6">
+           
+                <div class="inline-flex p-4 bg-emerald-100 text-emerald-600 rounded-full mb-2 animate-bounce">
+                    <i data-lucide="check-circle-2" class="w-12 h-12"></i>
+                </div>
+                
+                <div class="space-y-2">
+                    <h1 class="text-3xl font-extrabold text-slate-900">Parabéns! Seu Pedido foi Confirmado!</h1>
+                    <p class="text-slate-600">Enviamos os dados de acesso para o seu e-mail cadastrado.</p>
+                </div>
+    
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-left space-y-4">
+                    <div class="flex justify-between items-center pb-3 border-b border-slate-100 text-xs sm:text-sm">
+                        <div>
+                            <span class="text-slate-500">Número do Pedido</span>
+                            <p id="out-order-id" class="font-mono font-bold text-slate-900">#FS-84920</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-slate-500">Status</span>
+                            <p id="out-status" class="font-bold text-emerald-600">Aprovado</p>
+                        </div>
+                    </div>
+    
+                    <div class="grid grid-cols-2 gap-4 text-xs sm:text-sm">
+                        <div>
+                            <span class="text-slate-500 block">Cliente:</span>
+                            <strong id="out-name" class="text-slate-800">João da Silva</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 block">E-mail:</span>
+                            <strong id="out-email" class="text-slate-800">joao@email.com</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 block">Forma de Pagamento:</span>
+                            <strong id="out-method" class="text-slate-800">PIX</strong>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 block">Valor Total:</span>
+                            <strong id="out-total" class="text-emerald-600">R$ 297,00</strong>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 text-left space-y-3">
+                    <h3 class="font-bold text-blue-900 flex items-center gap-2 text-sm">
+                        <i data-lucide="mail" class="w-4 h-4"></i> O que acontece agora?
+                    </h3>
+                    <ul class="text-xs sm:text-sm text-blue-800 space-y-2 list-disc list-inside">
+                        <li>Verifique sua caixa de entrada (e pasta de spam) procurando pelo e-mail de <strong>FlowSales Pro</strong>.</li>
+                        <li>Clique no link recebido para cadastrar sua senha e acessar a plataforma.</li>
+                        <li>Caso tenha dúvidas, nossa equipe de suporte está pronta para ajudar.</li>
+                    </ul>
+                </div>
+    
+                <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+                    <button onclick="goToStep(1)" class="px-6 py-3 rounded-xl border border-slate-300 font-semibold text-slate-700 hover:bg-slate-100 transition text-sm">
+                        Voltar ao Início
+                    </button>
+                    <a href="https://wa.me/5511999999999?text=Olá,%20acabei%20de%20fazer%20o%20pedido%20no%20FlowSales!" target="_blank" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 font-bold text-white shadow-md shadow-emerald-600/20 transition text-sm flex items-center justify-center gap-2">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span>Falar com Suporte no WhatsApp</span>
+                    </a>
+                </div>
+    
+            </section>
+    
+        </main>
+    
+        <footer class="bg-white border-t border-slate-200 py-6 mt-12 text-center text-xs text-slate-500">
+            <div class="max-w-5xl mx-auto px-4 space-y-2">
+                <p>&copy; 2026 FlowSales Pro. Todos os direitos reservados.</p>
+                <p class="text-[11px] text-slate-400">Este é um protótipo interativo de vendas construído para fins de validação e demonstração.</p>
+            </div>
+        </footer>
+    
+    </body>
+    </html>
+<script src="js/script.js"></script>
+</body>
+
+</html>
